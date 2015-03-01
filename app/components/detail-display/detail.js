@@ -9,6 +9,9 @@ angular.module('myApp.detail-display', ['ngRoute'])
   });
 }])
 
-.controller('DetailCtrl', [function() {
-
+.controller('DetailCtrl', ['$http', '$scope', function($http, $scope) {
+  $http.get('http://localhost:8000/mock-data/big-title.json')
+    .success(function (data) {
+        $scope.detail = data;
+    });
 }]);

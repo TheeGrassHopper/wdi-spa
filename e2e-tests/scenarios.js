@@ -34,8 +34,8 @@ describe('my app', function() {
 
 
     it('should render detail when user navigates to /detail', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for detail display/);
+      expect(element.all(by.css('.title')).first().getText()).
+        toMatch(/Big/);
     });
 
   });
