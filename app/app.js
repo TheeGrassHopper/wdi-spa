@@ -4,8 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.detail-display',
-  'myApp.search-results',
-  'myApp.version'
+  'myApp.search-results'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/search'});
