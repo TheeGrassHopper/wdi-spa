@@ -9,8 +9,8 @@ angular.module('wdiSpa.detail-display', ['ngRoute'])
   });
 }])
 
-.controller('DetailCtrl', ['$http', '$scope', function($http, $scope) {
-  $http.get('http://localhost:8000/mock-data/big-title.json')
+.controller('DetailCtrl', ['HttpService', '$scope', function(httpService, $scope) {
+  httpService.get('http://localhost:8000/mock-data/big-title.json')
     .success(function (data) {
         $scope.detail = data;
     });

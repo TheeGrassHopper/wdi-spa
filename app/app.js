@@ -6,6 +6,10 @@ angular.module('wdiSpa', [
   'wdiSpa.detail-display',
   'wdiSpa.search-results'
 ]).
-config(['$routeProvider', function($routeProvider) {
+config(['$routeProvider', '$provide', function($routeProvider, $provide) {
   $routeProvider.otherwise({redirectTo: '/search'});
+
+  $provide.factory('HttpService', function ($http) {
+    return $http;
+  });
 }]);
