@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.detail-display', ['ngRoute'])
+angular.module('wdiSpa.detail-display', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/detail', {

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.search-results', ['ngRoute'])
+angular.module('wdiSpa.search-results', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/search', {

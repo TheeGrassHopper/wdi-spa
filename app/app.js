@@ -1,10 +1,10 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('wdiSpa', [
   'ngRoute',
-  'myApp.detail-display',
-  'myApp.search-results'
+  'wdiSpa.detail-display',
+  'wdiSpa.search-results'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/search'});

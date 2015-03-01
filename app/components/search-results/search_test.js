@@ -1,8 +1,8 @@
 'use strict';
 
-describe('myApp.search-results module', function() {
+describe('wdiSpa.search-results module', function() {
 
-  beforeEach(module('myApp.search-results'));
+  beforeEach(module('wdiSpa.search-results'));
 
   describe('search-results controller', function(){
 
