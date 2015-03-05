@@ -1,1 +1,6 @@
-<p>This is the partial for search results.</p>
+<h3>{{ response }}</h3>
+<ul ng-repeat="result in search">
+    <li>
+        <a href="#/detail/{{ result.Title.replace(' ', '-') }}">{{ result.Title }}
+    </li>
+</ul>
