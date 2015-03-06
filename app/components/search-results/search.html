@@ -1,6 +1,27 @@
-<h3>{{ response }}</h3>
-<ul ng-repeat="result in search">
-    <li>
-        <a href="#/detail/{{ result.Title.replace(' ', '-') }}">{{ result.Title }}
-    </li>
-</ul>
+<div ng-if="!search && !response && !spinner">
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Search Movies!</h1>
+            <p>This is a single page app that queries the OMDB API. Enjoy!</p>
+        </div>
+    </div>
+</div>
+<div ng-if="response">
+    <div class="jumbotron">
+        <div class="container">
+            <h3>{{ response }}</h3>
+        </div>
+    </div>
+</div>
+<div ng-if="spinner && !search">
+    <div class="search-spinner">
+        <span class="fa fa-refresh fa-spin"></span>
+    </div>
+</div>
+<div ng-if="search">
+    <ul>
+        <li ng-repeat="result in search">
+            <a href="#/detail/{{ result.Title.replace(' ', '-') }}">{{ result.Title }}
+        </li>
+    </ul>
+</div>

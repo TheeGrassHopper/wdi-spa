@@ -28,3 +28,11 @@
   content: "";
   padding: 0;
 }
+.main-content {
+  margin-top: 5em;
+}
+.search-spinner {
+  font-size: 3em;
+  margin: 25% auto;
+  width: 1em;
+}

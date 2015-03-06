@@ -16,12 +16,18 @@ angular.module('wdiSpa.search-results', ['ngRoute'])
 .controller('SearchResultsCtrl', ['HttpService', '$scope', '$routeParams', '$location', function(httpService, $scope, $routeParams, $location) {
 
   if ($routeParams.title) {
-      httpService.search($routeParams.title)
-      .success(function (data) {
-        $scope.search = data.Search;
-        $scope.response = data.Error;
-            console.log(data);
-      });
+      $scope.spinner = true;
+
+      // just for fun, let's show the spinner every time
+      setTimeout(function () {
+        httpService.search($routeParams.title)
+        .success(function (data) {
+          $scope.search = data.Search;
+          $scope.response = data.Error;
+
+          $scope.spinner = false;
+        });
+      }, 100);
   }
 }])
 
