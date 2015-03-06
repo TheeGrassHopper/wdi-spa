@@ -1,5 +1,11 @@
-<div ng-controller="DetailCtrl">
+<div ng-controller="DetailCtrl" class="row">
     <h1 class="title">{{ detail.Title }}</h1>
-    <img src="{{ detail.Poster }}" />
-    <p>{{ detail.Plot }}</p>
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="{{ detail.Poster }}" />
+        </div>
+        <div class="col-sm-4 col-sm-offset-1">
+            <p>{{ detail.Plot }}</p>
+        </div>
+    </div>
 </div>
