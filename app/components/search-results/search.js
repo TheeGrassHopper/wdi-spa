@@ -23,4 +23,22 @@ angular.module('wdiSpa.search-results', ['ngRoute'])
             console.log(data);
       });
   }
+}])
+
+.directive('searchUi', ['$location', function($location) {
+  var searchFunction = function () {
+    if (this.title) {
+      $location.path('/search/' + this.title);
+    }
+  };
+
+  return {
+    link: function link(scope, element, attrs) {
+      scope.search = searchFunction;
+    },
+    scope: {
+      'wdiTitle': '='
+    },
+    templateUrl: 'components/search-results/search-ui.html'
+  }
 }]);
