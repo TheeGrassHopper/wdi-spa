@@ -7,3 +7,5 @@ Load http://localhost:8000/app in browser.
 
 ## Using
 Angular Seed: https://github.com/angular/angular-seed
+Bootstrap
+Font Awesome
